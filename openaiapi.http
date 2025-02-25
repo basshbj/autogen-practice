@@ -1,0 +1,18 @@
+@endpoint = xxxx.openai.azure.com
+@deployment = gpt-4o
+@api_key = xxxx
+
+
+# Test Connection
+POST https://{{endpoint}}/openai/deployments/{{deployment}}/chat/completions?api-version=2024-10-21
+Content-Type: application/json
+api-key: {{api_key}}
+
+{
+ "messages": [
+  {
+   "role": "user",
+   "content": "Are you alive?"
+  }
+ ]
+}
